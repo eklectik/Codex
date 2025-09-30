@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drop Catching Dashboard</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Drop Catching - Monitoring des NDD</h1>
+      <div class="filters">
+        <label>
+          Recherche
+          <input type="search" id="search-input" placeholder="Rechercher un domaine" />
+        </label>
+        <label>
+          Extension
+          <select id="tld-filter">
+            <option value="all">Toutes</option>
+          </select>
+        </label>
+        <label>
+          Priorité
+          <select id="priority-filter">
+            <option value="all">Toutes</option>
+            <option value="high">Haute</option>
+            <option value="medium">Moyenne</option>
+            <option value="low">Basse</option>
+          </select>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <section class="metrics">
+        <article>
+          <h2>À surveiller</h2>
+          <p id="watch-count">0</p>
+        </article>
+        <article>
+          <h2>Fenêtre critique (&lt; 1h)</h2>
+          <p id="critical-count">0</p>
+        </article>
+        <article>
+          <h2>Catches réussis</h2>
+          <p id="caught-count">0</p>
+        </article>
+      </section>
+
+      <section class="board">
+        <table>
+          <thead>
+            <tr>
+              <th>Domaine</th>
+              <th>Extension</th>
+              <th>Priorité</th>
+              <th>Date d'expiration</th>
+              <th>Fenêtre drop</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="domain-table"></tbody>
+        </table>
+        <div class="empty-state" id="empty-state" hidden>
+          <p>Aucun domaine ne correspond à vos filtres.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        Mise à jour en temps réel simulée – adaptez ce dashboard avec vos
+        données d'enregistrement pour le drop catching.
+      </p>
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
+</html>
