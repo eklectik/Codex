@@ -1,0 +1,9 @@
+/vendor/
+/storage/*.zip
+/storage/*.xml
+/storage/*.tmp
+/public/uploads/*
+!public/uploads/.gitkeep
+/.idea/
+/.vscode/
+.DS_Store
