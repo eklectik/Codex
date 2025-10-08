@@ -1,0 +1,12 @@
+body {
+    font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+.navbar-brand {
+    font-weight: 600;
+}
+.table td, .table th {
+    vertical-align: middle;
+}
+.flash {
+    margin-bottom: 1rem;
+}
